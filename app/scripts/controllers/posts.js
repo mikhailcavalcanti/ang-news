@@ -1,5 +1,7 @@
 'use strict';
- 
-app.controller('PostsCtrl', function ($scope) {
 
+/* global app */
+ 
+app.controller('PostsCtrl', function () {
+  
 });
