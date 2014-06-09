@@ -20,6 +20,5 @@
   "smarttabs": true,
   "globals": {
     "angular": false
-  },
-  "app": false
+  }
 }
