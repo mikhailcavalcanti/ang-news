@@ -15,19 +15,15 @@ var app = angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'firebase'
   ]);
 app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
-      })
-      .otherwise({
+      }).otherwise({
         redirectTo: '/'
       });
   });
