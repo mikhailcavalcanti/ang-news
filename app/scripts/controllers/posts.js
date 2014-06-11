@@ -1,5 +1,12 @@
 'use strict';
 
+/**
+* @ngdoc function
+* @name angNewsApp.controller:PostsCtrl
+* @description
+* # PostsCtrl
+* Controller of the angNewsApp
+*/
 /* global app */
 app.controller('PostsCtrl', function ($scope, Post) {
   $scope.posts = Post.get();
