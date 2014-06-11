@@ -22,14 +22,8 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">angNews</h3>
-      </div>
+
+      <div ng-include="views/nav.html"></div>
 
       <div ng-view=""></div>
 
@@ -77,6 +71,8 @@
         <script src="scripts/controllers/posts.js"></script>
         <script src="scripts/services/post.js"></script>
         <script src="scripts/controllers/post-view.js"></script>
+        <script src="scripts/controllers/nav.js"></script>
+        <script src="scripts/filters/url.js"></script>
         <!-- endbuild -->
 </body>
 </html>
