@@ -24,7 +24,12 @@ app.config(function ($routeProvider) {
       .when('/', {
         templateUrl: 'views/posts.html',
         controller: 'PostsCtrl'
-      }).otherwise({
+      })
+      .when('/posts/:postId', {
+        templateUrl: 'views/post-view.html',
+        controller: 'PostViewCtrl'
+      })
+      .otherwise({
         redirectTo: '/'
       });
   });
