@@ -17,7 +17,8 @@ var app = angular
     'ngSanitize',
     'ngTouch',
     'firebase'
-  ]);
+  ])
+  .constant('FIREBASE_URL', 'https://ang-news-fiesh.firebaseio.com');
 app.config(function ($routeProvider) {
     $routeProvider
       .when('/', {
