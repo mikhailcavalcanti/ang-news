@@ -7,7 +7,7 @@
  * # NavctrlCtrl
  * Controller of the angNewsApp
  */
-app.controller('NavctrlCtrl', function ($scope) {
+app.controller('NavCtrl', function ($scope, $location, Post, Auth) {
   $scope.post = {url: 'http://', title: ''};
 
   $scope.submitPost = function () {
@@ -15,5 +15,8 @@ app.controller('NavctrlCtrl', function ($scope) {
       $location.path('/posts/' + ref.name());
       $scope.post = {url: 'http://', title: ''};
     });
+  };
+  $scope.logout = function () {
+    Auth.logout();
   };
 });

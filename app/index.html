@@ -23,7 +23,7 @@
     <!-- Add your site or application content here -->
     <div class="container">
 
-      <div ng-include="views/nav.html"></div>
+      <div ng-include="'views/nav.html'"></div>
 
       <div ng-view=""></div>
 
@@ -73,6 +73,8 @@
         <script src="scripts/controllers/post-view.js"></script>
         <script src="scripts/controllers/nav.js"></script>
         <script src="scripts/filters/url.js"></script>
+        <script src="scripts/services/auth.js"></script>
+        <script src="scripts/controllers/auth.js"></script>
         <!-- endbuild -->
 </body>
 </html>
