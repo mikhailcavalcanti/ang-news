@@ -8,5 +8,13 @@
  * Controller of the angNewsApp
  */
 app.controller('ProfileCtrl', function ($scope, $routeParams, Post, User) {
-  var user = User.$findByUsername($routeParams.username);
+
+  function populatePosts () {
+    $scope.posts = {};
+    angular.forEach($scope.user.posts, function (postId) {
+      $scope.posts[postId] = Post.find(postId);
+    });
+  }
+  $scope.user = User.findByUsername($routeParams.username);
+  $scope.user.$on('loaded', populatePosts);
 });

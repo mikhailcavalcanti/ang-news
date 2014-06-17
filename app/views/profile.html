@@ -10,22 +10,23 @@
         {{ user.username }}
       </span>
     </div>
- 
   </div>
- 
- 
+
   <div class="row">
- 
     <ul class="nav nav-tabs">
       <li class="active"><a data-target="#submissions" data-toggle="tab">Submissions</a></li>
       <li><a data-target="#comments" data-toggle="tab">Comments</a></li>
     </ul>
- 
   </div>
  
 </div>
  
 <div class="tab-content">
-  <div class="tab-pane active" id="submissions"></div>
-  <div class="container posts-page tab-pane" id="comments"></div>
+  <div
+    id="submissions"
+    class="tab-pane active"
+    ng-include="'views/posts.html'"
+    ng-controller="PostsCtrl">
+  </div>
+  <div id="comments" class="container posts-page tab-pane"></div>
 </div>
