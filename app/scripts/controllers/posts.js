@@ -7,7 +7,7 @@
 * # PostsCtrl
 * Controller of the angNewsApp
 */
-app.controller('PostsCtrl', function ($scope, $location, Post) {
+app.controller('PostsCtrl', function ($scope, $routeParams, $location, Post) {
   if ($location.path() === '/') {
     $scope.posts = Post.all;
   }
